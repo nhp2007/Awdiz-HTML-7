@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <script src="https://kit.fontawesome.com/f993f8949c.js" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: Circular, -apple-system, BlinkMacSystemFont, Roboto,
+                Helvetica Neue, sans-serif;
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            text-decoration: none;
+        }
+
+        #parent {
+
+            height: 8000px;
+            width: 100%;
+            /* border: 1px solid green; */
+        }
+
+        #head { position: sticky;
+            
+            top: 0px;
+            left: 0px;
+            background-color: white;
+            margin-left: 37px;
+            margin-right: 37px;
+            /* border: 1px solid black; */
+        }
+
+        #h1 {
+
+            display: flex;
+            background-color: white;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            /* border: 1px solid orangered; */
+        }
+
+        #logo {
+            height: 100%;
+            /* border: 1px solid red; */
+            width: 20%;
+            display: flex;
+            align-items: center;
+        }
+
+        #logo>img {
+            /* border: 1px solid yellow; */
+            height: 45%;
+            width: 40%;
+
+        }
+
+        #mid {
+            /* border: 1px solid orange; */
+            font-size: large;
+            width: 27%;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #mid>a {
+            color: #8b8b8b;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 87%;
+        }
+
+        #mid :nth-child(1) {
+            color: #222222;
+        }
+
+        #mid :nth-child(2) {
+            font-size: 15px;
+        }
+
+        #mid :nth-child(3) {
+            font-size: 15px;
+        }
+
+
+        #last {
+            /* border: 1px solid green; */
+            width: 22%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+        }
+
+        #last>a {
+            color: #222222;
+            font-size: 15px;
+            text-decoration: none;
+        }
+
+
+
+        #last>div {
+            border: 1px solid grey;
+            height: 47px;
+            width: 85px;
+            border-radius: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+
+        }
+
+        #last>div>img {
+            height: 70%;
+
+        }
+
+        @media screen and (min-width:900px) and (max-width:1100px) {
+            #mid {
+                display: none;
+            }
+            #h2c :nth-child(4) {display: none;}
+            #h3{display: none;}
+        }
+       
+
+        @media screen and (min-width:550px) and (max-width:900px) {
+            #h1 {
+                display: none;
+            }
+            #h2c :nth-child(3) {display: none;}
+            #h2c :nth-child(4) {display: none;}
+            #mid {
+                display: none;
+            }
+            #h2c :nth-child(4) {display: none;}
+            #icon{display: none;}
+        }
+
+        @media screen and (max-width:550px) {
+            #h2c :nth-child(3) {display: none;}
+            #h2c :nth-child(4) {display: none;}
+            #mid {
+                display: none;
+            }
+            #h2c :nth-child(4) {display: none;}
+        }
+
+        #h2 {
+            /* border: 1px solid #0000ff; */
+            height: 90px;
+            width: 100%;
+            display: flex;
+            justify-content: space-around;
+          
+        }
+
+        #h2c {
+            width: 67%;
+
+            height: 65px;
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid #dddddd;
+            border-radius: 40px;
+           
+
+
+        }
+
+        #h3{width: 94.6%;
+            /* border: 1px solid brown; */
+            justify-content: space-evenly; 
+            margin-left: 36px;
+            margin-right: 36px;
+             display: flex;
+
+        }
+
+       
+
+        #icon{
+            /* border: 2px solid black; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 80%;
+            height: 100px;
+            text-align: center;
+         
+        }
+     
+        #icon > a > img { 
+            /* opacity: 65%; */
+        height: 25px; 
+    }
+#icon > a > p {color: #6a6a9a; font-size: small;
+font-weight: light;}
+
+
+
+#h3last { width: 30%;  display: flex; align-items: center; justify-content: space-between;
+
+}
+
+#h3last > :nth-child(1) {height: 45px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #cac1c1;
+    width: 25%;
+     display: flex;
+     justify-content: space-around;
+    font-size: small;}
+
+     #h3last > :nth-child(2) {
+        width: 60%;
+        height: 45px;
+    align-items: center;
+    border-radius: 10px;
+    border: 2px solid #cac1c1;
+    display: flex;
+    align-items: center;
+    font-size: small;
+    justify-content: space-evenly;
+
+     }
+
+     /* body css start */
+
+     #body-parent {
+        margin-left: 39px;
+        margin-right: 39px;
+        /* border: 1px solid lightcoral; */
+    }
+
+     #body{width: 100%;
+       /* border: 2px solid green; */
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+        }
+
+        .pro-card {
+            width: 23.5%;
+            height: 390px;
+            /* border: 2px solid gold; */
+            margin-bottom:0px;
+            
+           
+        }
+
+        .card-b-img {
+            height: 275px;
+            width: 100%;
+            /* border: 2px solid blue; */
+            border-radius: 20px;
+            background-size: cover;
+            background-image: url(https://a0.muscache.com/im/pictures/02d72fa2-c584-4f38-9a28-945837c9c329.jpg?im_w=720);
+            margin-bottom: 10px;
+        } 
+
+        .card-b-img2 {
+            height: 275px;
+            width: 100%;
+            /* border: 2px solid blue; */
+            border-radius: 20px;
+            background-size: cover;
+            background-image: url(https://a0.muscache.com/im/pictures/841f687e-4932-4c17-9b03-e6897746badb.jpg?im_w=720);
+            margin-bottom: 10px;
+        }
+       
+        
+
+
+      .oimg {
+        padding-top: 10px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }   
+      
+      .oimg > p:nth-child(1) {
+        text-align: center;
+        width: 46%;
+        padding: 5px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 20px;
+      }
+      .oimg > i {
+        font-size: 24px;
+        color: rgb(206, 202, 202);
+      }
+
+      .img-text {
+        border: none;
+
+      }
+      .img-text > p {
+        color: #736c87;
+        font-size: 14px;
+        padding: 2px 0px;
+      }
+
+      .img-tex > p:nth-child(4) {
+        padding: 6px 0px;
+      }
+
+      .text-title {
+        font-weight: bold;
+        display: flex;
+        /* font-size: 14px; */
+        justify-content: space-between;
+      }
+
+      
+      .pro-card2 {
+            width: 23.5%;
+            height: 390px;
+            /* border: 2px solid gold; */
+            margin-bottom:0px;
+            
+           
+        }
+
+        .card-b-img2 {
+            height: 275px;
+            width: 100%;
+            /* border: 2px solid blue; */
+            border-radius: 20px;
+            background-size: cover;
+            background-image: url(https://a0.muscache.com/im/pictures/841f687e-4932-4c17-9b03-e6897746badb.jpg?im_w=720);
+            margin-bottom: 10px;
+        }
+       
+        
+
+
+      .oimg2 {
+        padding-top: 10px;
+        width: 90%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+      }   
+      
+      .oimg2 > p:nth-child(1) {
+        text-align: center;
+        width: 46%;
+        padding: 5px;
+        background-color: white;
+        font-weight: 500;
+        font-size: 14px;
+        border-radius: 20px;
+      }
+      .oimg2 > i {
+        font-size: 24px;
+        color: rgb(206, 202, 202);
+      }
+
+      .img-text2 {
+        border: none;
+
+      }
+      .img-text2 > p {
+        color: #736c87;
+        font-size: 14px;
+        padding: 2px 0px;
+      }
+
+      .img-tex2 > p:nth-child(4) {
+        padding: 6px 0px;
+      }
+
+      .text-title2 {
+        font-weight: bold;
+        display: flex;
+        /* font-size: 14px; */
+        justify-content: space-between;
+      }
+
+      
+      @media screen and (min-width:900px) and (max-width:1100px){
+        .pro-card {
+          width: 32%;
+        }
+
+        
+      }
+
+      @media screen and (min-width:550px) and (max-width:900px){
+        .pro-card {
+          width: 48%;
+        }
+
+        
+      }
+
+      @media screen and (max-width:550px) {
+        .pro-card {
+          width: 90%;
+          margin: auto;
+          margin-bottom: 20px;
+
+      }
+    }
+    </style>
+</head>
+
+<body>
+    <!-- parent-d-start -->
+    <div id="parent">
+        <!-- head-start -->
+        <div id="head">
+            <div id="h1">
+                <div id="logo"><img
+                        src="../media/kisspng-airbnb-logo-san-francisco-travel-hotel-airbnb-logo-5b1a2a2c62ffb6.5945316015284413884055.png"
+                        alt="" /></div>
+
+
+
+                <div id="mid">
+                    <a href="/login">Stays</a>
+                    <a href="/login">Experiences</a>
+                    <a href="/login">Online Experiences</a>
+
+
+                </div>
+
+
+
+
+
+
+                <div id="last">
+                    <a href="/login">Airbnb your home</a>
+                    <a href="/login"><i class="fa-solid fa-globe fa-lg"></i></a>
+                    <div>
+                        <i class="fa-solid fa-bars"></i>
+                        <img src="../media/pngegg (1).png" alt="">
+                    </div>
+                </div>
+                <!-- h1 -->
+            </div>
+
+
+            <div id="h2">
+
+                <div id="h2c">
+
+                    <div style="margin-left: 23px;">
+                        <h5>Where</h5>
+                        <h5>Search destinations</h5>
+
+
+
+                    </div>
+
+
+                    <div>
+                        <h5>Check in</h5>
+                        <h5>Add dates</h5>
+
+
+
+
+                    </div>
+
+
+                    <div>
+                        <h5>Check out</h5>
+                        <h5>Add dates</h5>
+
+
+
+                    </div>
+
+                    <div>
+
+                        <h5>Who</h5>
+                        <h5>Add guests</h5>
+
+                    </div>
+
+
+                    <div
+                        style="margin-right: 7px; justify-content: space-evenly; width: 50px;  height: 50px; display: flex; align-items: center;  border-radius: 50%; background-color: #ff385c;">
+                        <i class="fa-sharp fa-solid fa-magnifying-glass" style="color: white;"></i>
+
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        <!-- head-end -->
+
+        <div id="h3">
+            <div id="icon">
+            <a href="/login"> <img src="https://a0.muscache.com/pictures/732edad8-3ae0-49a8-a451-29a8010dcc0c.jpg" alt=""><p>cabin</p> </a>
+            <a href="/login"> <img src="https://a0.muscache.com/pictures/7630c83f-96a8-4232-9a10-0398661e2e6f.jpg" alt=""><p>Rooms</p> </a>
+            <a href="/login"> <img src="https://a0.muscache.com/pictures/d7445031-62c4-46d0-91c3-4f29f9790f7a.jpg" alt=""><p>Earth homes</p> </a>
+            <a href="/login"> <img src="../image/bcd1adc0-5cee-4d7a-85ec-f6730b0f8d0c.jpg" alt=""><p>Beachfront</p> </a>
+            <a href="/login"> <img src="../image/33dd714a-7b4a-4654-aaf0-f58ea887a688.jpg" alt=""> <p>Historical homes</p></a>
+            <a href="/login"> <img src="../image/4d4a4eba-c7e4-43eb-9ce2-95e1d200d10e.jpg" alt=""><p>Treehouses</p> </a>
+            <a href="/login"> <img src="../image/8b44f770-7156-4c7b-b4d3-d92549c8652f.jpg" alt=""><p>Arctic</p> </a>
+            <a href="/login"> <img src="../image/c0a24c04-ce1f-490c-833f-987613930eca.jpg" alt=""><p>National parks </p> </a>
+            <a href="/login"> <img src="../image/3fb523a0-b622-4368-8142-b5e03df7549b.jpg" alt=""><p>Amazing pools</p> </a>
+            <a href="/login"><i class="fa-solid fa-circle-chevron-right fa-flip-vertical fa-2xl" style="color: #9997a1;"></i></a>
+            </div>
+
+     <div id="h3last">
+
+            <div style="margin-left: 30px;"><i class="fa-solid fa-sliders fa-flip-horizontal fa-xl fa-xl"></i>
+            <p>Filters</p></div>
+           
+            <div><p>Display total before taxes
+                <i class="fa-solid fa-toggle-on fa-flip-horizontal fa-2xl" style="color: #ababab;"></i>
+            </p></div>
+            
+
+
+
+
+
+
+        </div>
+ </div>
+<div id="body-parent">
+
+ <div id="body">
+
+<!-- card1 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+
+   <!-- card2 -->
+<!-- 
+
+    <div class="pro-card2">
+        <div class="card-b-img2">
+            <div class="oimg2">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text2">
+                <div class="text-title2">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div> -->
+
+    <!-- card3 -->
+
+    <div class="pro-card">
+        <div class="card-b-img2">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+<!-- card4 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- card5 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- card6 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+<!-- card7 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+<!-- card8 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+
+<!-- card9 -->
+
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+<!-- card10 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+<!-- card11 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+
+<!-- card12 -->
+
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+
+
+<!-- card12 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+  <!-- card12 -->
+
+    <div class="pro-card">
+        <div class="card-b-img">
+            <div class="oimg">
+                <p>Guest favourite</p>
+                <i class="fa-regular fa-heart "></i>
+            </div>
+        </div>
+        <div>
+            <div class="img-text">
+                <div class="text-title">
+                <p>Vashi, Mumbai</p>
+                <p>
+                <i class="fa-solid fa-star fa-xs"></i>
+                <span>5.0</span>
+            </p>
+        </div>
+        <p>7,931 Kilomitors Away</p>
+        <p>22-27 Jul</p>
+        <p><b>₹15000</b> night</p>
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+
+        <div>foot</div>
+
+
+
+
+
+
+
+
+    </div>
+    <!-- parent-d-end -->
+</body>
+
+</html>
